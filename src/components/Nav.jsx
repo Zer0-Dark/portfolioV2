@@ -1,4 +1,6 @@
-import { AnchorLink } from "react-anchor-link-smooth-scroll";
+// import { AnchorLink } from 'react-anchor-link-smooth-scroll';
+import { Link, Navigate } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import useReadingProgress from "../hooks/useReadingProgress";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -30,7 +32,7 @@ function Nav() {
                         {/* Navigation links */}
 
                         {navItems.map((item, index) => (
-                            <AnchorLink before={item.num} key={index} href={item.to} className={`relative  after:content-[attr(before)] after:absolute after:text-yelloow  after:-top-2 after:text-sm after:right-0 hover:text-aqua`} >/ {item.name}</AnchorLink>
+                            <HashLink smooth before={item.num} key={index} to={item.to} className={`relative  after:content-[attr(before)] after:absolute after:text-yelloow  after:-top-2 after:text-sm after:right-0 hover:text-aqua`} >/ {item.name}</HashLink>
                         ))}
                     </div>
                     <div className="visible lg:hidden mr-12 ">
@@ -55,7 +57,7 @@ function Nav() {
                 >
 
                     {navItems.map((item, index) => (
-                        <AnchorLink before={item.num} key={index} onClick={() => setShowNav((prev) => !prev)} href={item.to} className={`h-1/4 relative after:content-[attr(before)] hover:bg-grey2 after:absolute text-center text-xl flex items-center justify-center after:text-yelloow after:bottom-1 text-meadow font-semibold after:text-sm after:right-[50%] after:translate-x-[50%] hover:text-aqua border-2 border-grey2`}>/ {item.name}</AnchorLink>
+                        <HashLink smooth before={item.num} key={index} onClick={() => setShowNav((prev) => !prev)} to={item.to} className={`h-1/4 relative after:content-[attr(before)] hover:bg-grey2 after:absolute text-center text-xl flex items-center justify-center after:text-yelloow after:bottom-1 text-meadow font-semibold after:text-sm after:right-[50%] after:translate-x-[50%] hover:text-aqua border-2 border-grey2`}>/ {item.name}</HashLink>
                     ))}
 
                 </motion.nav>
