@@ -1,6 +1,4 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import React from 'react'
-import ReactDOM from 'react-dom'
 import useReadingProgress from "../hooks/useReadingProgress";
 import { motion } from "framer-motion";
 import { useState } from "react";
