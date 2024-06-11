@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaFile, FaEnvelope, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaFile, FaLinkedin } from 'react-icons/fa';
 import SectionTitle from './SectionTitle';
 import pdf from "../assets/SKILLS.pdf"
 const contactLinks = [
-    { icon: <FaGithub className="lg:text-7xl text-5xl  " />, text: 'GitHub', href: '' },
+    { icon: <FaGithub className="lg:text-7xl text-5xl  " />, text: 'GitHub', href: 'https://github.com/Zer0-Dark' },
     { icon: <FaFile className="lg:text-7xl text-5xl " />, text: 'Resume', href: pdf },
-    { icon: <FaEnvelope className="lg:text-7xl text-5xl " />, text: 'E-mail', href: '' },
-    { icon: <FaLinkedin className="lg:text-7xl text-5xl " />, text: 'LinkedIn', href: '' },
+    // { icon: <FaEnvelope className="lg:text-7xl text-5xl " />, text: 'E-mail', href: 'abdulrahman.elbedawey@gmail.com' },
+    { icon: <FaLinkedin className="lg:text-7xl text-5xl " />, text: 'LinkedIn', href: 'https://www.linkedin.com/in/abdulrahman-elbedawey-5b20aa194/' },
 ];
 
 const ContactComponent = () => {
@@ -16,6 +16,7 @@ const ContactComponent = () => {
             <div className="flex space-y-12 lg:space-y-0 lg:space-x-12 lg:flex-row flex-col w-full justify-center items-center text-3xl text-white">
                 {contactLinks.map((link, index) => (
                     <motion.a
+                        target='_blank'
                         key={index}
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
