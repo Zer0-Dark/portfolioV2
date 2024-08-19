@@ -1,7 +1,7 @@
 // import { AnchorLink } from 'react-anchor-link-smooth-scroll';
 import { HashLink } from "react-router-hash-link";
 import useReadingProgress from "../hooks/useReadingProgress";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { FaBars, FaWindowClose } from "react-icons/fa";
 
@@ -47,20 +47,23 @@ function Nav() {
             </nav >
 
             {/* Mobile navigation menu */}
-            {
-                showNav &&
-                <motion.nav
-                    initial={{ y: -200, scale: 0.5 }}
-                    animate={{ y: 0, scale: 1 }}
-                    className="fixed right-9 pt-16 w-[45%] z-10 h-[55%] bg-raisinBlack flex flex-col"
-                >
+            <AnimatePresence>
+                {
+                    showNav &&
+                    <motion.nav
+                        initial={{ y: -200, scale: 0.5 }}
+                        animate={{ y: 0, scale: 1 }}
+                        exit={{ y: -200, scale: 0.5 }}
+                        className="fixed right-9 pt-16 w-[45%] z-10 h-[55%] bg-raisinBlack flex flex-col"
+                    >
 
-                    {navItems.map((item, index) => (
-                        <HashLink smooth before={item.num} key={index} onClick={() => setShowNav((prev) => !prev)} to={item.to} className={`h-1/4 relative after:content-[attr(before)] hover:bg-grey2 after:absolute text-center text-xl flex items-center justify-center after:text-yelloow after:bottom-1 text-meadow font-semibold after:text-sm after:right-[50%] after:translate-x-[50%] hover:text-aqua border-2 border-grey2`}>/ {item.name}</HashLink>
-                    ))}
+                        {navItems.map((item, index) => (
+                            <HashLink smooth before={item.num} key={index} onClick={() => setShowNav((prev) => !prev)} to={item.to} className={`h-1/4 relative after:content-[attr(before)] hover:bg-grey2 after:absolute text-center text-xl flex items-center justify-center after:text-yelloow after:bottom-1 text-meadow font-semibold after:text-sm after:right-[50%] after:translate-x-[50%] hover:text-aqua border-2 border-grey2`}>/ {item.name}</HashLink>
+                        ))}
 
-                </motion.nav>
-            }
+                    </motion.nav>
+                }
+            </AnimatePresence>
         </>
     );
 }

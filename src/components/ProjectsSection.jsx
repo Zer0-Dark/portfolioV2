@@ -13,7 +13,7 @@ function ProjectsSection() {
         paragraph={project.paragraph}
     />)
 
-    let filterByList = ["HTML CSS", "JS", "REACT"];
+    let filterByList = ["HTML CSS", "JS", "REACT", "TYPESCRIPT"];
     let style = "cursor-pointer font-normal py-2 px-4 ml-2 bg-grey2  text-sm text-yelloow rounded-md hover:bg-aqua hover:text-raisinBlack"
     let style2 = "cursor-pointer font-normal py-2 px-4 ml-2  text-sm  rounded-md bg-aqua text-raisinBlack"
     let [allprojetct, setAllProjects] = useState(true)
