@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaFile, FaLinkedin } from 'react-icons/fa';
 import SectionTitle from './SectionTitle';
-import pdf from "../assets/SKILLS.pdf"
+import pdf from "../assets/CV (2).pdf"
 const contactLinks = [
     { icon: <FaGithub className="lg:text-7xl text-5xl  " />, text: 'GitHub', href: 'https://github.com/Zer0-Dark' },
     { icon: <FaFile className="lg:text-7xl text-5xl " />, text: 'Resume', href: pdf },
