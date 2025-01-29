@@ -1,5 +1,5 @@
 
-import homeAnimation from '../assets/homeAnimation.gif';
+import homeAnimation from '../assets/homeAnimation-ez.gif';
 function Hero() {
     return (
         <header id='home' className="lg:h-[100vh] h-[100vh] w-[100%]  flex flex-col-reverse  lg:flex-row justify-end pt-12  lg:pt-0 items-center lg:justify-between lg:pl-4 text-center lg:text-left ">
