@@ -80,13 +80,5 @@
         "github": "https://github.com/Zer0-Dark/template2",
         "used": "HTML CSS"
     },
-    {
-        "id": "10",
-        "img": "https://i.postimg.cc/bvLFHkrP/Fire-Shot-Capture-027-Vite-React-TS-localhost.png",
-        "name": "smartHome",
-        "paragraph": "Landing Page made with some Animation",
-        "live": "https://meek-muffin-d59c6b.netlify.app/",
-        "github": "https://github.com/Zer0-Dark/smartHome",
-        "used": "REACT TYPESCRIPT"
-    }
+
 ]
